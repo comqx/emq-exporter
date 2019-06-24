@@ -50,7 +50,7 @@ class EmqttCollector(object):
         duration = time.time() - start  # 持续的时间
         COLLECTION_TIME.observe(duration)  # 添加jenkins_collector_collect_seconds的值
 
-    # 回去jenkins数据，返回inner函数，函数的值是job
+    # 回去emqtt数据，返回inner函数，函数的值是job
     def _request_data(self):
         # Request exactly the information we need from Jenkins
         url = '{0}/api/v2/monitoring/nodes'.format(self._target)
